@@ -1,7 +1,9 @@
+# - IMPORTS START ---------------------------------------------------------------------------------------------------- #
 from flask import Flask, render_template
 from flask_cors import CORS
+# - IMPORTS END ------------------------------------------------------------------------------------------------------ #
 
-
+# - APP CREATE START ------------------------------------------------------------------------------------------------- #
 def create_app():
     app = Flask(__name__)
     CORS(app)
@@ -20,3 +22,5 @@ def create_app():
         return render_template('index.html')  # Renders the index.html from the templates directory
 
     return app
+print("App created.")
+# - APP CREATE END --------------------------------------------------------------------------------------------------- #

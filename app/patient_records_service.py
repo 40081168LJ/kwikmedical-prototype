@@ -1,6 +1,9 @@
+# - IMPORTS START ---------------------------------------------------------------------------------------------------- #
 from flask import Blueprint, jsonify
 import sqlite3
+# - IMPORTS END ------------------------------------------------------------------------------------------------------ #
 
+# - BLUEPRINT START -------------------------------------------------------------------------------------------------- #
 # Define the Blueprint
 patient_records_bp = Blueprint('patient_records', __name__)
 
@@ -21,3 +24,4 @@ def get_patient_info(patient_id):
         }), 200
     else:
         return jsonify({'error': 'Patient not found'}), 404
+# - BLUEPRINT END ---------------------------------------------------------------------------------------------------- #

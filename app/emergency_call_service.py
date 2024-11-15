@@ -1,6 +1,9 @@
+# - IMPORTS START ---------------------------------------------------------------------------------------------------- #
 from flask import Blueprint, request, jsonify
 import requests
+# - IMPORTS END ------------------------------------------------------------------------------------------------------ #
 
+# - BLUEPRINT START -------------------------------------------------------------------------------------------------- #
 # Define the Blueprint
 emergency_call_bp = Blueprint('emergency_call', __name__)
 
@@ -27,3 +30,4 @@ def handle_emergency_call():
             return jsonify({'error': 'Failed to dispatch ambulance'}), 500
     else:
         return jsonify({'error': 'Patient not found'}), 404
+# - BLUEPRINT END ---------------------------------------------------------------------------------------------------- #

@@ -1,5 +1,8 @@
+# - IMPORTS START ---------------------------------------------------------------------------------------------------- #
 from flask import Blueprint, request, jsonify
+# - IMPORTS END ------------------------------------------------------------------------------------------------------ #
 
+# - BLUEPRINT START -------------------------------------------------------------------------------------------------- #
 # Define the Blueprint
 ambulance_dispatch_bp = Blueprint('ambulance_dispatch', __name__)
 
@@ -10,3 +13,4 @@ def dispatch_ambulance():
         'status': 'Success',
         'message': f"Ambulance dispatched to {dispatch_data['location']} for {dispatch_data['name']}"
     }), 200
+# - BLUEPRINT END ---------------------------------------------------------------------------------------------------- #
